@@ -1,0 +1,157 @@
+.page{
+    background-color: #7BAFD4;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.navbar{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #13294B;
+    height: 12%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-logo{
+    background-size: contain;
+}
+
+.logo{
+    height: 94px;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-size: contain;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    align-items: stretch;
+}
+
+.navbar-text{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+}
+
+.navbar-text:hover{
+    background-color: #7BAFD4;
+    color: #13294B;
+}
+
+.page-body{
+    height: 88vh;
+}
+
+.home-left-side{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    float: left;
+    align-items: center;
+}
+
+.home-team-pic{
+    max-width: 100%;
+}
+
+.team-pic{
+    max-width: 100%;
+}
+
+.home-right-side{
+    width: 50%;
+    height: 100%;
+    float: right;
+    text-align: center;
+}
+
+#intro-box{
+    background-color: #F8F8F8;
+    display: inline-block;
+    margin: 3%;
+    height: 44%;
+}
+
+#intro-box-title{
+    font-size: 58px;
+    margin: 2%;
+    color: #13294B;
+}
+
+#intro-box-description{
+    font-size: 19px;
+    line-height: 2.3;
+    color: #13294B;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    margin: 0%;
+}
+
+.secondary-box-container{
+    margin-top: 0%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 44%;
+}
+
+.secondary-box{
+    background-color: #F8F8F8;
+    float: left;
+    height: 100%;
+    width: 48%;
+}
+
+.secondary-box-text{
+    color: #13294B;
+}
+
+#secondary-box-list{
+    text-align: left;
+}
+
+.secondary-box-item{
+    font-size: 17px;
+    line-height: 2;
+    color: #13294B;
+}
+
+.home-links-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.clickable{
+    background-color: lightgrey;
+    padding: 4%;
+    border: #13294B;
+    border-style: double;
+}
+
+.clickable:hover{
+    background-color: white;
+}
+
+.clickable-text{
+    font-size: 24px;
+    color: #13294B;
+    text-decoration: none;
+}
