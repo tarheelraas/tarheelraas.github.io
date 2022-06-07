@@ -7,10 +7,10 @@
     <title>Tar Heel Raas Website!</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="page">
+<body class="page" id="events-page">
     <div class="navbar">
         <div class="navbar-logo">
-            <a href="index.html"><img src="pictures/THR_Logo.png" alt="Pic Unavailable" class="logo"></a>
+            <a href="index.html"><img src="media/THR_Logo.png" alt="Pic Unavailable" class="logo"></a>
         </div>
         <div class="navbar-links">
             <a href="index.html" class="navbar-text">Home</a>
@@ -22,7 +22,21 @@
         </div>
     </div>
     <div class="page-body">
-        <h1>Stay tuned... This page is under construction</h1>
+        <div class="calendar-container">
+            <div class="text-box" id="events-title-box">
+                <h1 class="text" id="events-title">Events</h1>
+            </div>
+            <iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showPrint=0&showCalendars=1&showDate=1&showNav=1&src=cW43cWtsbTFjNTN2NThpcGtlaW1raHVuMHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E4C441" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="important-links-container">
+            <div class="text-box" id="important-links-title-box">
+                <h1 class="text" id="important-links-title">Important Links</h1>
+            </div>
+            <div class="text-box" id="important-links">
+                <h1 class="no-important-links">No Important Links Right Now!</h1>
+                <h1 class="no-important-links">Stay tuned for tryout information!</h1>
+            </div>
+        </div>
     </div>
     
 </body>
