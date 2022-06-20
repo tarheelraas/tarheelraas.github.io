@@ -7,11 +7,11 @@ class Navbar extends HTMLElement{
 
     render(){
         this.shadow.innerHTML= `
-        <link rel="stylesheet" href="styles/navbar-styles.css">
+        <link rel="stylesheet" href="../styles/navbar-styles.css">
         <link rel="stylesheet" href="https://use.typekit.net/tpg1uai.css">
             <div class="navbar">
                 <div class="navbar-logo">
-                    <a href="index.html"><img src="media/THR_Logo.png" alt="Pic Unavailable" class="logo"></a>
+                    <a href="index.html"><img src="../media/THR_Logo.png" alt="Pic Unavailable" class="logo"></a>
                     <a href="index.html" class="navbar-text" id="tar-heel-raas-header">TAR HEEL RAAS</a>
                 </div>
                 <div class="navbar-links">      
