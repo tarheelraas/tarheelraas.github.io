@@ -1,0 +1,61 @@
+.navbar{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 13%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-logo{
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    height: 100%;
+    width: 35%;
+    z-index: 2;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width: 65%;
+}
+
+.logo{
+    height: 120px;
+    padding-left: 15px;
+    /*background-size: contain;*/
+}
+
+#tar-heel-raas-header{
+    padding-left: 5%;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.navbar-text{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+    font-family:'darkmode-on';
+    text-underline-offset: 5px;
+}
+
+.navbar-text:hover{
+    /*color: #13294B;*/
+    text-decoration: underline;
+}
+
+.page-body{
+    height: 88vh;
+}

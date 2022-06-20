@@ -1,0 +1,81 @@
+#home-page{
+    position: absolute;
+    height: 87%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.home-page-intro-text{
+    font-size: 80px;
+    color: white;
+    z-index: 2;
+    margin-left: 25%;
+    margin-right: 22%;
+    width: 56%;
+    font-family: 'darkmode-on';
+    font-weight: bold;
+    text-shadow: 2px;
+
+    animation: home-page-title-animation 1.5s ease-in;
+}
+
+.home-page-dancer{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+}
+
+#dancer-1{
+    float: left;
+
+    animation: dancer-1-animation 1.5s ease-in;
+}
+
+#dancer-2{
+    float: right;
+    left: 50%;
+    animation: dancer-2-animation 1.5s ease-in;
+}
+
+
+@keyframes dancer-1-animation{
+    0%{
+        transform: translateX(400px);
+
+    }
+    50%{
+        transform: translate(400px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes dancer-2-animation{
+    0%{
+        transform: translateX(-400px);
+
+    }
+    50%{
+        transform: translate(-400px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes home-page-title-animation{
+    0%{
+        opacity: 0;
+        font-size: 0px;
+    }
+    50%{
+        opacity: 0;
+        font-size: 0px;
+    }
+    100%{
+
+    }
+}
