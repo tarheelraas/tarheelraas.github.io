@@ -1,0 +1,108 @@
+#performances-title-box{
+    margin: 2%;
+    padding: 1%;
+    border-radius: 25px;
+}
+
+#performances-primary-text{
+    font-size: 55px;
+}
+
+#performances-secondary-text{
+    font-size: 40px;
+}
+
+#performances-title-text{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#performances-secondary-text{
+    margin-top: 1%;
+}
+
+#performances-here-link{
+    text-decoration: none;
+    color: purple;
+}
+
+.performances{
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
+.performance-box{
+    margin-bottom: 2%;
+    width: 100%;
+    height: 440px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.performance-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.performance-info{
+    height: 100%;
+    width: 80%;
+    background-color: lightgrey;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+}
+
+.performance-link{
+    height: 100%;
+    width: 60%;
+    max-width: 60%;
+}
+
+.performance-left-sidebar{
+    height: 100%;
+    width: 20%;
+    max-width: 20%;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.performance-right-sidebar{
+    height: 100%;
+    width: 20%;
+    max-width: 20%;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.performance-year{
+    color: #13294B;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+#performance-covid-years{
+    color: #13294B;
+    font-size: 38px;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.performance-theme{
+    color: #13294B;
+    font-size: 38px;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    max-height: 100%;
+}

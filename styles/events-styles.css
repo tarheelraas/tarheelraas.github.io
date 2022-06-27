@@ -1,0 +1,59 @@
+#events-page{
+    overflow: hidden;
+}
+
+.calendar-container{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+    width: 53%;
+}
+
+#events-title-box{
+    border-radius: 25px;
+    max-width: 800px;
+    text-align: center;
+}
+
+#events-title{
+    padding: 1%;
+    font-size: 40px;
+    color: #13294B;
+}
+
+#calendar{
+    border-radius: 5px;
+    height: 600px;
+    width: 800px;
+}
+
+.important-links-container{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: right;
+    width: 42%;
+}
+
+#important-links-title-box{
+    border-radius: 25px;
+    text-align: center;
+}
+
+#important-links-title{
+    padding: 1%;
+    font-size: 40px;
+    color: #13294B;
+}
+
+#important-links{
+    border-radius: 25px;
+    text-align: center;
+}
+
+.no-important-links{
+    padding: 1%;
+    font-size: 40px;
+    color: #13294B;
+}

@@ -1,0 +1,56 @@
+#get-involved-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-container {
+    display: grid;
+    gap: 80px;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instagram-container{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#email-container{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#facebook-container{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#events-container{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#heellife-container{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#ras-container{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.contact-logo{
+    height: 210px;
+}
+
+.contacts-text{
+    color: #13294B;
+    font-size: 28px;
+    font-weight: bold;
+}

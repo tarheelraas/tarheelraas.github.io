@@ -1,0 +1,50 @@
+.fam-title-container{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+#fam-title-box{
+    height: 80%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fam-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.fam-container{
+    height: 200%;
+}
+
+.fam-row{
+    border-style: solid;
+    height: 18%;
+    font-size: 0;
+}
+
+.individual-container{
+    height: 100%;
+    width: 18%;
+    display: block;
+    border-style: dotted;
+}
+
+.individual-bio-box{
+    background-color: white;
+}
+
+.individual-bio{
+    font-size: 16px;
+    margin: 0px;
+    padding: 5px;
+    color: #13294B;
+    font-weight: bold;
+}
+.individual-headshot{
+    height: 85%;
+}
