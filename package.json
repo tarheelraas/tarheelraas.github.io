@@ -2,7 +2,7 @@
   "name": "tarheelraas.github.io",
   "version": "1.0.0",
   "description": "Welcome to Tar Heel Raas's Website!",
-  "main": "pages/index.js",
+  "main": "pages/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/tarheelraas/tarheelraas.github.io/issues"
   },
-  "homepage": "https://github.com/tarheelraas/tarheelraas.github.io#readme"
+  "homepage": "pages/index.html"
 }
