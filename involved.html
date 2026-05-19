@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved — Tar Heel Raas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <!-- <img src="images/logo.png" alt="Tar Heel Raas Logo" /> -->
+      <span class="nav-logo-text">Tar Heel Raas</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="competitions.html">Competitions</a></li>
+      <li><a href="involved.html" class="active">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Get Involved</h1>
+    <p>No experience needed. Just come ready to learn and feel the THRill.</p>
+  </div>
+
+  <!-- WAYS TO JOIN -->
+  <div class="section">
+    <div class="section-label">Join Us</div>
+    <h2>There's a place for you here</h2>
+    <p class="section-intro">Tar Heel Raas is all-inclusive — we welcome dancers of all backgrounds and experience levels.</p>
+
+    <div class="involve-grid">
+      <div class="involve-card">
+        <div class="involve-icon">💃</div>
+        <h3>Try Out</h3>
+        <p>
+          Tryouts are open to all UNC students regardless of dance background.
+          We'll teach you everything you need to know — just show up with energy
+          and enthusiasm.
+        </p>
+        <!--
+          Replace the href below with your actual interest form link
+          e.g. a Google Form link
+        -->
+        <a href="#" class="btn-primary">Interest Form ↗</a>
+      </div>
+
+      <div class="involve-card">
+        <div class="involve-icon">🎉</div>
+        <h3>Come to a Workshop</h3>
+        <p>
+          We host beginner-friendly workshops throughout the year so you can
+          get a taste of Garba and Raas before committing to tryouts.
+        </p>
+        <a href="events.html" class="btn-outline">See Upcoming Events</a>
+      </div>
+
+      <div class="involve-card">
+        <div class="involve-icon">📱</div>
+        <h3>Follow Us</h3>
+        <p>
+          Keep up with performances, practice schedules, and behind-the-scenes
+          content on our social media.
+        </p>
+        <!--
+          Replace the href below with your actual Instagram link
+        -->
+        <a href="#" class="btn-outline" target="_blank">Instagram ↗</a>
+      </div>
+
+      <div class="involve-card">
+        <div class="involve-icon">🐏</div>
+        <h3>HEELlife</h3>
+        <p>
+          We're an official UNC registered student organization. Find us on
+          HEELlife for official announcements and event listings.
+        </p>
+        <a href="https://heellife.unc.edu/organization/tar-heel-raas" class="btn-outline" target="_blank">View Profile ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FAQ -->
+  <div class="section-alt">
+    <div class="section-label">Questions</div>
+    <h2>FAQ</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need dance experience to join?</div>
+        <div class="faq-a">Nope! We welcome everyone. We'll teach you Garba and Raas from the ground up. All you need is enthusiasm.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When are tryouts?</div>
+        <div class="faq-a">Tryouts are typically held at the beginning of the fall semester. Fill out the interest form to stay in the loop.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much is the time commitment?</div>
+        <div class="faq-a">During competition season we practice multiple times a week. Outside of that it varies — we'll always communicate the schedule clearly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I have to be South Asian to join?</div>
+        <div class="faq-a">Not at all. Tar Heel Raas is open to all UNC students regardless of background. We love sharing our culture with everyone.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <!-- <img src="images/logo.png" alt="Tar Heel Raas Logo" /> -->
+      <span class="footer-logo-text">Tar Heel Raas</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="competitions.html">Competitions</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Tar Heel Raas · UNC Chapel Hill</div>
+  </footer>
+
+  <style>
+    .involve-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .involve-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .involve-card:hover {
+      border-color: var(--carolina);
+      box-shadow: 0 4px 20px rgba(75, 156, 211, 0.1);
+    }
+
+    .involve-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .involve-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .involve-card p {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 22px;
+    }
+
+    .faq-list {
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+      max-width: 720px;
+    }
+
+    .faq-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-q {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.85;
+    }
+  </style>
+
+</body>
+</html>

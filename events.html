@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events — Tar Heel Raas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <!-- <img src="images/logo.png" alt="Tar Heel Raas Logo" /> -->
+      <span class="nav-logo-text">Tar Heel Raas</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="competitions.html">Competitions</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Events & Videos</h1>
+    <p>Catch us live across campus and beyond — or relive past events through our videos.</p>
+  </div>
+
+  <!-- UPCOMING EVENTS -->
+  <div class="section">
+    <div class="section-label">Coming Up</div>
+    <h2>Upcoming Events</h2>
+
+    <div class="event-list">
+      <!--
+        To add an event, copy one event-item block and fill in:
+        - the date
+        - the event name
+        - the location
+        - the tag (Event, Competition, or Video)
+      -->
+      <div class="event-item">
+        <div class="event-date">TBD</div>
+        <div class="event-info">
+          <div class="event-name">Add your next event here</div>
+          <div class="event-loc">Location</div>
+        </div>
+        <span class="event-tag tag-event">Event</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- PAST EVENTS -->
+  <div class="section-alt">
+    <div class="section-label">Look Back</div>
+    <h2>Past Events</h2>
+
+    <div class="event-list">
+      <div class="event-item">
+        <div class="event-date">Apr 5, 2025</div>
+        <div class="event-info">
+          <div class="event-name">Navratri Showcase</div>
+          <div class="event-loc">Memorial Hall, Chapel Hill</div>
+        </div>
+        <span class="event-tag tag-event">Event</span>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Feb 22, 2025</div>
+        <div class="event-info">
+          <div class="event-name">Holi Celebration</div>
+          <div class="event-loc">The Pit, UNC Chapel Hill</div>
+        </div>
+        <span class="event-tag tag-event">Event</span>
+      </div>
+      <div class="event-item">
+        <div class="event-date">Jan 18, 2025</div>
+        <div class="event-info">
+          <div class="event-name">2025 Season Promo Video</div>
+          <div class="event-loc">
+            <a href="https://www.youtube.com/watch?v=Q6MPDWRcWtA" target="_blank">Watch on YouTube ↗</a>
+          </div>
+        </div>
+        <span class="event-tag tag-video">Video</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <!-- <img src="images/logo.png" alt="Tar Heel Raas Logo" /> -->
+      <span class="footer-logo-text">Tar Heel Raas</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="competitions.html">Competitions</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Tar Heel Raas · UNC Chapel Hill</div>
+  </footer>
+
+  <style>
+    .event-list {
+      margin-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+
+    .event-item {
+      display: grid;
+      grid-template-columns: 110px 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .event-item:hover {
+      background: rgba(75, 156, 211, 0.03);
+    }
+
+    .event-date {
+      font-family: 'Fraunces', serif;
+      font-size: 14px;
+      color: var(--carolina);
+      font-weight: 700;
+    }
+
+    .event-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .event-loc {
+      font-size: 12px;
+      color: var(--gray);
+      font-weight: 300;
+    }
+
+    .event-loc a {
+      color: var(--carolina);
+    }
+
+    .event-tag {
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .tag-event { background: rgba(75, 156, 211, 0.12); color: #0d4a7a; }
+    .tag-competition { background: rgba(164, 202, 225, 0.3); color: #0d4a7a; }
+    .tag-video { background: rgba(141, 144, 146, 0.15); color: #3a3d3f; }
+  </style>
+
+</body>
+</html>
