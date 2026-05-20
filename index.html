@@ -11,17 +11,17 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 64px;
-      padding: 100px 48px;
+      padding: 100px 80px;
       background: #fff;
     }
 
     .hero-eyebrow {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--carolina);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -36,12 +36,12 @@
     }
 
     .headline-wrap {
-      min-height: 160px;
-      margin-bottom: 20px;
+      min-height: 170px;
+      margin-bottom: 24px;
     }
 
     .headline-wrap h1 {
-      font-size: 80px;
+      font-size: 88px;
       line-height: 1.05;
     }
 
@@ -53,7 +53,7 @@
     .cursor {
       display: inline-block;
       width: 4px;
-      height: 72px;
+      height: 80px;
       background: var(--carolina);
       vertical-align: middle;
       margin-left: 4px;
@@ -66,10 +66,10 @@
     }
 
     .hero-body {
-      font-size: 18px;
+      font-size: 19px;
       color: var(--gray);
-      max-width: 440px;
-      margin-bottom: 36px;
+      max-width: 480px;
+      margin-bottom: 40px;
       line-height: 1.85;
       font-weight: 300;
     }
@@ -80,7 +80,7 @@
     .carousel {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: 500px;
       border-radius: 4px;
       overflow: hidden;
     }
@@ -108,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: rgba(19, 41, 75, 0.35);
@@ -120,7 +120,7 @@
 
     .carousel-dots {
       position: absolute;
-      bottom: 14px;
+      bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -128,8 +128,8 @@
     }
 
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 9px;
+      height: 9px;
       border-radius: 50%;
       background: rgba(255,255,255,0.5);
       cursor: pointer;
@@ -150,8 +150,8 @@
     .about-copy p {
       color: #444;
       line-height: 1.95;
-      margin-bottom: 16px;
-      font-size: 16px;
+      margin-bottom: 18px;
+      font-size: 18px;
       font-weight: 300;
     }
 
@@ -165,7 +165,7 @@
     .about-links a {
       color: var(--carolina);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 500;
       border-bottom: 1px solid rgba(75, 156, 211, 0.3);
       padding-bottom: 2px;
@@ -184,18 +184,18 @@
       overflow: hidden;
     }
 
-    .stat { background: #fff; padding: 28px; }
+    .stat { background: #fff; padding: 30px; }
 
     .stat-number {
       font-family: 'Paytone One', sans-serif;
-      font-size: 48px;
+      font-size: 52px;
       color: var(--carolina);
       line-height: 1;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .stat-label {
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--gray);
@@ -204,7 +204,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">
       <div class="nav-logo-box">Logo</div>
@@ -219,7 +218,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-text">
       <div class="hero-eyebrow">University of North Carolina at Chapel Hill</div>
@@ -236,15 +234,9 @@
       </div>
     </div>
 
-    <!-- CAROUSEL -->
     <div class="carousel" id="carousel">
-      <!--
-        To add your photos, replace each carousel-placeholder div with:
-        <img src="images/your-photo.jpg" alt="description" />
-        inside the carousel-slide div.
-      -->
       <div class="carousel-slide active">
-        <div class="carousel-placeholder p1">Your photo here</div>
+        <img src="actualpics/DSC09272.jpg" alt="team photo" />
       </div>
       <div class="carousel-slide">
         <div class="carousel-placeholder p2">Your photo here</div>
@@ -262,7 +254,6 @@
 
   <hr class="divider" />
 
-  <!-- ABOUT -->
   <div class="section" id="about">
     <div class="section-label">Our Story</div>
     <h2>More than a dance team</h2>
@@ -310,7 +301,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">
       <div class="footer-logo-box">Logo</div>
@@ -320,10 +310,9 @@
   </footer>
 
   <script>
-    // TYPEWRITER
     const el = document.getElementById('headline');
     const phrases = [
-      { text: 'Meet ', highlight: 'Tar Heel Raas.' },
+      { text: 'Welcome to ', highlight: 'Tar Heel Raas!' },
       { text: 'Feel the ', highlight: 'THRill!' },
     ];
     let pi = 0, ci = 0, del = false, done = false;
@@ -359,7 +348,6 @@
 
     type();
 
-    // CAROUSEL
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.dot');
