@@ -10,9 +10,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      gap: 64px;
-      padding: 60px 80px;
-      min-height: calc(100vh - 72px);
+      gap: 48px;
+      padding: 40px 80px;
       background: #fff;
     }
 
@@ -22,7 +21,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--carolina);
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -37,8 +36,8 @@
     }
 
     .headline-wrap {
-      min-height: 170px;
-      margin-bottom: 24px;
+      min-height: 160px;
+      margin-bottom: 20px;
     }
 
     .headline-wrap h1 {
@@ -70,18 +69,17 @@
       font-size: 19px;
       color: var(--gray);
       max-width: 480px;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
       line-height: 1.85;
       font-weight: 300;
     }
 
     .btn-row { display: flex; gap: 14px; }
 
-    /* CAROUSEL */
     .carousel {
       position: relative;
       width: 100%;
-      height: 500px;
+      height: 520px;
       border-radius: 4px;
       overflow: hidden;
     }
@@ -115,7 +113,6 @@
       color: rgba(19, 41, 75, 0.35);
     }
 
-    .p1 { background: var(--light-blue); }
     .p2 { background: #7ab5d4; }
     .p3 { background: #5aa0c8; }
 
@@ -139,7 +136,6 @@
 
     .dot.active { background: #fff; }
 
-    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -201,6 +197,16 @@
       letter-spacing: 0.08em;
       color: var(--gray);
     }
+
+    .faq-list {
+      margin-top: 44px;
+      border-top: 1px solid var(--border);
+      max-width: 740px;
+    }
+
+    .faq-item { padding: 28px 0; border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 17px; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
+    .faq-a { font-size: 15px; color: var(--gray); font-weight: 300; line-height: 1.85; }
   </style>
 </head>
 <body>
@@ -212,10 +218,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">About</a></li>
-      <li><a href="photos.html">Photos</a></li>
+      <li><a href="involved.html">Get Involved</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="competitions.html">Competitions</a></li>
-      <li><a href="involved.html">Get Involved</a></li>
+      <li><a href="photos.html">Photos</a></li>
     </ul>
   </nav>
 
@@ -237,7 +243,7 @@
 
     <div class="carousel" id="carousel">
       <div class="carousel-slide active">
-        <img src="actualpics/DSC09272.jpg" alt="team photo" />
+        <img src="actualpics/DSC09272.jpg" alt="2025-26 team photo" />
       </div>
       <div class="carousel-slide">
         <img src="actualpics/bkb.jpg" alt="team photo" />
@@ -298,6 +304,31 @@
           <div class="stat-number">∞</div>
           <div class="stat-label">Love for Raas</div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="section-alt" id="faq">
+    <div class="section-label">Questions</div>
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Do I need dance experience to join?</div>
+        <div class="faq-a">Nope! We welcome everyone. We'll teach you Garba and Raas from the ground up. All you need is enthusiasm.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When are tryouts?</div>
+        <div class="faq-a">Tryouts are typically held at the beginning of the fall semester. Fill out the interest form to stay in the loop.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much is the time commitment?</div>
+        <div class="faq-a">During competition season we practice multiple times a week. Outside of that it varies — we'll always communicate the schedule clearly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I have to be South Asian to join?</div>
+        <div class="faq-a">Not at all. Tar Heel Raas is open to all UNC students regardless of background. We love sharing our culture with everyone.</div>
       </div>
     </div>
   </div>

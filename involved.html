@@ -20,10 +20,19 @@
     .involve-card h3 { margin-bottom: 12px; }
     .involve-card p { font-size: 15px; color: var(--gray); line-height: 1.85; font-weight: 300; margin-bottom: 24px; }
 
-    .faq-list { margin-top: 44px; border-top: 1px solid var(--border); max-width: 740px; }
-    .faq-item { padding: 28px 0; border-bottom: 1px solid var(--border); }
-    .faq-q { font-size: 17px; font-weight: 500; color: var(--navy); margin-bottom: 10px; }
-    .faq-a { font-size: 15px; color: var(--gray); font-weight: 300; line-height: 1.85; }
+    .faq-cta {
+      margin-top: 64px;
+      padding: 48px;
+      background: var(--light-blue-pale);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .faq-cta h3 { font-size: 28px; margin-bottom: 8px; }
+    .faq-cta p { font-size: 16px; color: var(--gray); font-weight: 300; }
   </style>
 </head>
 <body>
@@ -35,10 +44,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">About</a></li>
-      <li><a href="photos.html">Photos</a></li>
+      <li><a href="involved.html" class="active">Get Involved</a></li>
       <li><a href="events.html">Events</a></li>
       <li><a href="competitions.html">Competitions</a></li>
-      <li><a href="involved.html" class="active">Get Involved</a></li>
+      <li><a href="photos.html">Photos</a></li>
     </ul>
   </nav>
 
@@ -77,30 +86,13 @@
         <a href="https://heellife.unc.edu/organization/tar-heel-raas" class="btn-outline" target="_blank">View Profile ↗</a>
       </div>
     </div>
-  </div>
 
-  <hr class="divider" />
-
-  <div class="section-alt">
-    <div class="section-label">Questions</div>
-    <h2>FAQ</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">Do I need dance experience to join?</div>
-        <div class="faq-a">Nope! We welcome everyone. We'll teach you Garba and Raas from the ground up. All you need is enthusiasm.</div>
+    <div class="faq-cta">
+      <div>
+        <h3>Have questions?</h3>
+        <p>Check out our FAQ for answers to the most common questions about joining.</p>
       </div>
-      <div class="faq-item">
-        <div class="faq-q">When are tryouts?</div>
-        <div class="faq-a">Tryouts are typically held at the beginning of the fall semester. Fill out the interest form to stay in the loop.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How much is the time commitment?</div>
-        <div class="faq-a">During competition season we practice multiple times a week. Outside of that it varies — we'll always communicate the schedule clearly.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do I have to be South Asian to join?</div>
-        <div class="faq-a">Not at all. Tar Heel Raas is open to all UNC students regardless of background. We love sharing our culture with everyone.</div>
-      </div>
+      <a href="index.html#faq" class="btn-primary">See FAQs ↗</a>
     </div>
   </div>
 
