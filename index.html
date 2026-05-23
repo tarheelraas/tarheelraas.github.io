@@ -68,7 +68,6 @@
     .hero-body {
       font-size: 19px;
       color: var(--gray);
-      max-width: 480px;
       margin-bottom: 36px;
       line-height: 1.85;
       font-weight: 300;
@@ -139,7 +138,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 72px;
-      margin-top: 52px;
+      margin-top: 20px;
       align-items: start;
     }
 
@@ -149,6 +148,7 @@
       margin-bottom: 18px;
       font-size: 18px;
       font-weight: 300;
+      max-width: 100%;
     }
 
     .about-links {
@@ -228,8 +228,9 @@
     .faq-trigger:hover .faq-q { color: var(--carolina); }
 
     .faq-q {
-      font-family: 'Paytone One', sans-serif;
-      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
       color: var(--navy);
       transition: color 0.2s;
     }
@@ -332,8 +333,6 @@
           time, there's a place for you here.
         </p>
         <div class="about-links">
-          <a href="attachments/Tar Heel Raas Team Constitution.pdf" target="_blank">Team Constitution ↗</a>
-          <a href="https://heellife.unc.edu/organization/tar-heel-raas" target="_blank">HEELlife ↗</a>
         </div>
       </div>
 
@@ -364,6 +363,7 @@
   <div class="faq-section" id="faq">
     <div class="section-label">Questions</div>
     <h2>FAQ</h2>
+    <p style="font-size:15px;color:var(--gray);font-weight:300;margin-top:6px">Further questions? DM <a href="https://instagram.com/tarheelraas" target="_blank" style="color:var(--carolina);font-weight:500">@tarheelraas</a> on Instagram</p>
 
     <div class="faq-accordion">
 
@@ -415,7 +415,7 @@
     const el = document.getElementById('headline');
     const phrases = [
       { text: 'Welcome to ', highlight: 'Tar Heel Raas!' },
-      { text: 'Feel the ', highlight: 'THRill!' },
+      { text: 'Welcome! Feel the ', highlight: 'THRill!' },
     ];
     let pi = 0, ci = 0, del = false, done = false;
 
@@ -437,7 +437,7 @@
         ci++; render();
         if (ci === full.length) {
           if (pi === phrases.length - 1) { done = true; render(); return; }
-          setTimeout(() => { del = true; type(); }, 1800);
+          setTimeout(() => { del = true; type(); }, 3000);
           return;
         }
         setTimeout(type, 65);
