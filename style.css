@@ -178,10 +178,10 @@ h3 { font-size: 26px; margin-bottom: 12px; }
 /* PAGE HERO */
 .page-hero {
   background: var(--light-blue);
-  padding: 16px 48px;
+  padding: 36px 48px;
 }
 
-.page-hero h1 { color: var(--navy); font-size: 40px; margin-bottom: 0; }
+.page-hero h1 { color: var(--navy); font-size: 56px; margin-bottom: 0; }
 .page-hero p { color: rgba(19, 41, 75, 0.7); font-size: 19px; font-weight: 300; max-width: 520px; line-height: 1.85; }
 
 /* FOOTER */
