@@ -138,7 +138,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 72px;
-      margin-top: 20px;
+      margin-top: 12px;
       align-items: start;
     }
 
@@ -198,12 +198,12 @@
 
     /* FAQ ACCORDION */
     .faq-section {
-      padding: 96px 48px;
+      padding: 20px 48px;
       background: #fff;
     }
 
     .faq-accordion {
-      margin-top: 48px;
+      margin-top: 16px;
       border-top: 1px solid var(--border);
       width: 100%;
     }
@@ -216,7 +216,7 @@
       width: 100%;
       background: none;
       border: none;
-      padding: 28px 0;
+      padding: 14px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -250,7 +250,7 @@
 
     .faq-body {
       display: none;
-      padding: 0 0 28px;
+      padding: 0 0 14px;
       font-size: 17px;
       color: var(--gray);
       font-weight: 300;
@@ -413,37 +413,39 @@
   <script>
     // TYPEWRITER
     const el = document.getElementById('headline');
-    const phrases = [
-      { text: 'Welcome to ', highlight: 'Tar Heel Raas!' },
-      { text: 'Welcome! Feel the ', highlight: 'THRill!' },
-    ];
-    let pi = 0, ci = 0, del = false, done = false;
+    // Typewriter: "Welcome" always stays, only suffix changes
+    const suffix1 = { text: ' to ', highlight: 'Tar Heel Raas!' };
+    const suffix2 = { text: ',
+', highlight: 'Feel the THRill!' };
+    const suffixes = [suffix1, suffix2];
+    let si = 0, ci = 0, del = false, done = false;
 
     function render() {
-      const p = phrases[pi];
-      const full = p.text + p.highlight;
+      const s = suffixes[si];
+      const full = s.text + s.highlight;
       const typed = full.slice(0, ci);
-      const pl = p.text.length;
+      const pl = s.text.length;
       const cursor = done ? '' : '<span class="cursor"></span>';
-      el.innerHTML = typed.length <= pl
+      let suffix = typed.length <= pl
         ? typed + cursor
-        : p.text + '<em>' + typed.slice(pl) + '</em>' + cursor;
+        : s.text + '<em>' + typed.slice(pl) + '</em>' + cursor;
+      el.innerHTML = 'Welcome' + suffix.replace('\n', '<br>');
     }
 
     function type() {
-      const p = phrases[pi];
-      const full = p.text + p.highlight;
+      const s = suffixes[si];
+      const full = s.text + s.highlight;
       if (!del) {
         ci++; render();
         if (ci === full.length) {
-          if (pi === phrases.length - 1) { done = true; render(); return; }
+          if (si === suffixes.length - 1) { done = true; render(); return; }
           setTimeout(() => { del = true; type(); }, 3000);
           return;
         }
         setTimeout(type, 65);
       } else {
         ci--; render();
-        if (ci === 0) { del = false; pi++; setTimeout(type, 400); return; }
+        if (ci === 0) { del = false; si++; setTimeout(type, 400); return; }
         setTimeout(type, 35);
       }
     }

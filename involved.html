@@ -6,45 +6,135 @@
   <title>Get Involved — Tar Heel Raas</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .two-thin {
+    .top-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+      align-items: stretch;
+    }
+
+    /* TRYOUTS CARD */
+    .tryout-card {
+      background: var(--light-blue-pale);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tryout-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tryout-card-body {
+      padding: 20px 20px 24px;
+      text-align: center;
+    }
+
+    .tryout-card-body h3 {
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .tryout-card-body p {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    /* MIDDLE + RIGHT CARDS */
+    .info-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      height: 100%;
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .info-card a.inline {
+      color: var(--carolina);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .info-card a.inline:hover { text-decoration: underline; }
+
+    /* BOTTOM ROWS */
+    .bottom-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 14px;
+      gap: 16px;
     }
 
-    .thin-card {
+    .connect-row {
       border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 16px 20px;
+      border-radius: 8px;
+      padding: 20px 24px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
       transition: border-color 0.2s;
     }
 
-    .thin-card:hover { border-color: var(--carolina); }
-    .thin-card h3 { font-size: 14px; }
+    .connect-row:hover { border-color: var(--carolina); }
 
-    .full-row {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 22px 24px;
+    .connect-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--light-blue-pale);
+      border-radius: 50%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      margin-bottom: 14px;
-      transition: border-color 0.2s;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
-    .full-row:hover { border-color: var(--carolina); }
-    .full-row h3 { font-size: 18px; margin-bottom: 6px; }
-    .full-row p { font-size: 15px; color: var(--gray); font-weight: 300; line-height: 1.7; }
-    .full-row.highlight { background: var(--light-blue-pale); border-color: var(--carolina); }
-    .full-row a.inline { color: var(--carolina); text-decoration: none; font-weight: 500; }
-    .full-row a.inline:hover { text-decoration: underline; }
+    .connect-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--navy);
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .connect-row h3 {
+      font-size: 16px;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .connect-row a {
+      font-size: 13px;
+      color: var(--carolina);
+      font-weight: 500;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -63,43 +153,67 @@
     </ul>
   </nav>
 
-  <div class="page-hero" style="padding:36px 48px">
+  <div class="page-hero" style="padding:16px 48px;background:#fff">
     <h1>Get Involved</h1>
   </div>
 
   <div class="section">
 
-    <div class="two-thin">
-      <div class="thin-card">
-        <h3>Follow our Instagram</h3>
-        <a href="#" class="btn-primary" target="_blank">Instagram ↗</a>
-      </div>
-      <div class="thin-card">
-        <h3>Connect on HEELlife</h3>
-        <a href="https://heellife.unc.edu/organization/tar-heel-raas" class="btn-primary" target="_blank">HEELlife ↗</a>
-      </div>
-    </div>
+    <div class="top-grid">
 
-    <div class="full-row highlight">
-      <div>
-        <h3>Tryouts</h3>
-        <p>Open to all UNC students, no experience needed. Look out for posts in early September!</p>
+      <!-- TRYOUTS -->
+      <div class="tryout-card">
+        <img src="actualpics/tryout.jpg" alt="Tryouts" />
+        <div class="tryout-card-body">
+          <h3>Tryouts</h3>
+          <p>Open to all UNC students, no experience needed. Look out for posts in early September!</p>
+          <a href="#" class="btn-primary">Join Us!</a>
+        </div>
       </div>
-    </div>
 
-    <div class="full-row">
-      <div>
-        <h3>Want us to perform at your event?</h3>
-        <p>Reach out to us at <a href="mailto:tarheelraas@gmail.com" class="inline">tarheelraas@gmail.com</a> or DM us on Instagram <a href="#" class="inline">@tarheelraas</a></p>
+      <!-- PERFORM -->
+      <div class="info-card">
+        <h3>Want us to perform?</h3>
+        <p>Contact us at <a href="mailto:tarheelraas@gmail.com" class="inline">tarheelraas@gmail.com</a> or DM us on Instagram at <a href="https://instagram.com/tarheelraas" class="inline" target="_blank">@tarheelraas</a>.</p>
       </div>
-    </div>
 
-    <div class="full-row">
-      <div>
+      <!-- FAQ -->
+      <div class="info-card">
         <h3>Have questions?</h3>
         <p>Check our FAQs and if there's something not answered, reach out on our Instagram!</p>
+        <a href="index.html#faq" class="btn-outline" style="margin-top:8px">See FAQs</a>
       </div>
-      <a href="index.html#faq" class="btn-primary">See FAQs ↗</a>
+
+    </div>
+
+    <div class="bottom-grid">
+
+      <!-- INSTAGRAM -->
+      <div class="connect-row">
+        <div class="connect-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Follow us @tarheelraas</h3>
+          <a href="https://instagram.com/tarheelraas" target="_blank">Instagram</a>
+        </div>
+      </div>
+
+      <!-- HEELLIFE -->
+      <div class="connect-row">
+        <div class="connect-icon">
+          <img src="actualpics/UNCTarHeelRaas_TeamLogo.png" style="width:28px;height:28px;object-fit:contain;" />
+        </div>
+        <div>
+          <h3>Connect on HEELlife</h3>
+          <a href="https://heellife.unc.edu/organization/tar-heel-raas" target="_blank">HEELlife</a>
+        </div>
+      </div>
+
     </div>
 
   </div>
