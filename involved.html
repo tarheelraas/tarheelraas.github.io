@@ -6,92 +6,45 @@
   <title>Get Involved — Tar Heel Raas</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .involved-grid {
+    .two-thin {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
     }
 
-    .inv-card {
+    .thin-card {
       border: 1px solid var(--border);
       border-radius: 4px;
-      padding: 24px 22px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .inv-card:hover {
-      border-color: var(--carolina);
-      box-shadow: 0 4px 20px rgba(75, 156, 211, 0.1);
-    }
-
-    .inv-card h3 { font-size: 22px; margin-bottom: 8px; }
-
-    .inv-card p {
-      font-size: 15px;
-      color: var(--gray);
-      font-weight: 300;
-      line-height: 1.75;
-      margin-bottom: 18px;
-    }
-
-    .tryout-card {
-      background: var(--light-blue);
-      border-radius: 4px;
-      padding: 32px 36px;
-      margin-top: 16px;
-    }
-
-    .tryout-card h3 { font-size: 28px; color: var(--navy); margin-bottom: 10px; }
-
-    .tryout-card p {
-      font-size: 16px;
-      color: rgba(19,41,75,0.7);
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    .book-card {
-      background: var(--navy);
-      border-radius: 4px;
-      padding: 32px 36px;
-      margin-top: 16px;
-    }
-
-    .book-card h3 { font-size: 26px; color: #fff; margin-bottom: 8px; }
-
-    .book-card p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.55);
-      font-weight: 300;
-      line-height: 1.8;
-    }
-
-    .book-card a.email {
-      font-family: 'Paytone One', sans-serif;
-      font-size: 18px;
-      color: var(--light-blue);
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 12px;
-      transition: color 0.2s;
-    }
-
-    .book-card a.email:hover { color: #fff; }
-
-    .faq-cta {
-      margin-top: 16px;
-      padding: 24px 32px;
-      background: var(--light-blue-pale);
-      border-radius: 4px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
+      transition: border-color 0.2s;
     }
 
-    .faq-cta h3 { font-size: 20px; margin-bottom: 4px; }
-    .faq-cta p { font-size: 14px; color: var(--gray); font-weight: 300; }
+    .thin-card:hover { border-color: var(--carolina); }
+    .thin-card h3 { font-size: 14px; }
+
+    .full-row {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .full-row:hover { border-color: var(--carolina); }
+    .full-row h3 { font-size: 18px; margin-bottom: 6px; }
+    .full-row p { font-size: 15px; color: var(--gray); font-weight: 300; line-height: 1.7; }
+    .full-row.highlight { background: var(--light-blue-pale); border-color: var(--carolina); }
+    .full-row a.inline { color: var(--carolina); text-decoration: none; font-weight: 500; }
+    .full-row a.inline:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -110,42 +63,38 @@
     </ul>
   </nav>
 
-  <div class="page-hero">
+  <div class="page-hero" style="padding:36px 48px">
     <h1>Get Involved</h1>
   </div>
 
   <div class="section">
 
-    <div class="involved-grid">
-      <div class="inv-card">
+    <div class="two-thin">
+      <div class="thin-card">
         <h3>Follow our Instagram</h3>
-        <p>Behind the scenes, event announcements, and everything THR.</p>
         <a href="#" class="btn-primary" target="_blank">Instagram ↗</a>
       </div>
-      <div class="inv-card">
-        <h3>Join us on HEELlife</h3>
-        <p>Follow us on HEELlife to stay up to date on announcements and events.</p>
+      <div class="thin-card">
+        <h3>Connect on HEELlife</h3>
         <a href="https://heellife.unc.edu/organization/tar-heel-raas" class="btn-primary" target="_blank">HEELlife ↗</a>
       </div>
-      <div class="inv-card">
-        <h3>Join the GroupMe</h3>
-        <p>Stay connected and get real-time updates on practice, events, and more.</p>
-        <a href="#" class="btn-outline" target="_blank">Join GroupMe ↗</a>
+    </div>
+
+    <div class="full-row highlight">
+      <div>
+        <h3>Tryouts</h3>
+        <p>Open to all UNC students, no experience needed. Look out for posts in early September!</p>
       </div>
     </div>
 
-    <div class="tryout-card">
-      <h3>Want to join the team?</h3>
-      <p>Tryouts are open to all UNC students regardless of experience. No Garba or Raas background needed. Look out for posts in early September for tryout info!</p>
+    <div class="full-row">
+      <div>
+        <h3>Want us to perform at your event?</h3>
+        <p>Reach out to us at <a href="mailto:tarheelraas@gmail.com" class="inline">tarheelraas@gmail.com</a> or DM us on Instagram <a href="#" class="inline">@tarheelraas</a></p>
+      </div>
     </div>
 
-    <div class="book-card">
-      <h3>Want us to perform at your event?</h3>
-      <p>We'd love to bring Raas and Garba to your stage. Reach out and let's make it happen.</p>
-      <a href="mailto:tarheelraas@gmail.com" class="email">tarheelraas@gmail.com ↗</a>
-    </div>
-
-    <div class="faq-cta">
+    <div class="full-row">
       <div>
         <h3>Have questions?</h3>
         <p>Check our FAQs and if there's something not answered, reach out on our Instagram!</p>
