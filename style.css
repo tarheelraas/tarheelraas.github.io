@@ -128,9 +128,9 @@ nav {
 .btn-outline:hover { background: var(--carolina); color: #fff; text-decoration: none; }
 
 /* SECTIONS */
-.section { padding: 20px 48px; }
-.section-alt { padding: 20px 48px; background: var(--light-blue-pale); }
-.section-blue { padding: 20px 48px; background: var(--light-blue); }
+.section { padding: 20px 48px 25px; }
+.section-alt { padding: 20px 48px 25px; background: var(--light-blue-pale); }
+.section-blue { padding: 20px 48px 25px; background: var(--light-blue); }
 
 .section-label {
   font-size: 12px;

@@ -415,8 +415,7 @@
     const el = document.getElementById('headline');
     // Typewriter: "Welcome" always stays, only suffix changes
     const suffix1 = { text: ' to ', highlight: 'Tar Heel Raas!' };
-    const suffix2 = { text: ',
-', highlight: 'Feel the THRill!' };
+    const suffix2 = { text: ',<br>', highlight: 'Feel the THRill!' };
     const suffixes = [suffix1, suffix2];
     let si = 0, ci = 0, del = false, done = false;
 
@@ -429,7 +428,7 @@
       let suffix = typed.length <= pl
         ? typed + cursor
         : s.text + '<em>' + typed.slice(pl) + '</em>' + cursor;
-      el.innerHTML = 'Welcome' + suffix.replace('\n', '<br>');
+      el.innerHTML = 'Welcome' + suffix;
     }
 
     function type() {

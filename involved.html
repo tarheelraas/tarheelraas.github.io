@@ -6,75 +6,98 @@
   <title>Get Involved — Tar Heel Raas</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .top-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 16px;
-      align-items: stretch;
+    .inv-hero {
+      padding: 16px 48px 0;
+      background: #fff;
     }
 
-    /* TRYOUTS CARD */
+    .inv-hero h1 {
+      font-family: 'Paytone One', sans-serif;
+      font-size: 48px;
+      color: var(--navy);
+      margin: 0;
+    }
+
+    .inv-content {
+      padding: 16px 48px 20px;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    /* TRYOUTS */
     .tryout-card {
       background: var(--light-blue-pale);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      border: 1px solid rgba(164,202,225,0.5);
+      border-radius: 10px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 220px;
     }
 
     .tryout-card img {
       width: 100%;
-      height: 200px;
+      height: 100%;
       object-fit: cover;
       display: block;
     }
 
     .tryout-card-body {
-      padding: 20px 20px 24px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       text-align: center;
     }
 
     .tryout-card-body h3 {
-      font-size: 22px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
       color: var(--navy);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .tryout-card-body p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--gray);
       font-weight: 300;
-      line-height: 1.7;
-      margin-bottom: 18px;
+      line-height: 1.65;
+      margin-bottom: 14px;
     }
 
-    /* MIDDLE + RIGHT CARDS */
+    /* INFO CARDS */
     .info-card {
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 28px 24px;
+      border-radius: 10px;
+      padding: 24px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 10px;
-      height: 100%;
+      gap: 8px;
+      min-height: 220px;
     }
 
     .info-card h3 {
-      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
       color: var(--navy);
       margin-bottom: 6px;
     }
 
     .info-card p {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--gray);
       font-weight: 300;
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
     .info-card a.inline {
@@ -83,22 +106,20 @@
       text-decoration: none;
     }
 
-    .info-card a.inline:hover { text-decoration: underline; }
-
     /* BOTTOM ROWS */
     .bottom-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 14px;
     }
 
     .connect-row {
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 20px 24px;
+      border-radius: 10px;
+      padding: 18px 22px;
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 16px;
       transition: border-color 0.2s;
     }
 
@@ -121,10 +142,14 @@
       stroke: var(--navy);
       fill: none;
       stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .connect-row h3 {
-      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
       color: var(--navy);
       margin-bottom: 3px;
     }
@@ -153,15 +178,14 @@
     </ul>
   </nav>
 
-  <div class="page-hero" style="padding:16px 48px;background:#fff">
+  <div class="inv-hero">
     <h1>Get Involved</h1>
   </div>
 
-  <div class="section">
+  <div class="inv-content">
 
     <div class="top-grid">
 
-      <!-- TRYOUTS -->
       <div class="tryout-card">
         <img src="actualpics/tryout.jpg" alt="Tryouts" />
         <div class="tryout-card-body">
@@ -171,30 +195,27 @@
         </div>
       </div>
 
-      <!-- PERFORM -->
       <div class="info-card">
         <h3>Want us to perform?</h3>
         <p>Contact us at <a href="mailto:tarheelraas@gmail.com" class="inline">tarheelraas@gmail.com</a> or DM us on Instagram at <a href="https://instagram.com/tarheelraas" class="inline" target="_blank">@tarheelraas</a>.</p>
       </div>
 
-      <!-- FAQ -->
       <div class="info-card">
         <h3>Have questions?</h3>
-        <p>Check our FAQs and if there's something not answered, reach out on our Instagram!</p>
-        <a href="index.html#faq" class="btn-outline" style="margin-top:8px">See FAQs</a>
+        <p>Check our FAQs or reach out on Instagram!</p>
+        <a href="index.html#faq" class="btn-outline" style="margin-top:10px">See FAQs</a>
       </div>
 
     </div>
 
     <div class="bottom-grid">
 
-      <!-- INSTAGRAM -->
       <div class="connect-row">
         <div class="connect-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="var(--navy)" stroke="none"/>
           </svg>
         </div>
         <div>
@@ -203,7 +224,6 @@
         </div>
       </div>
 
-      <!-- HEELLIFE -->
       <div class="connect-row">
         <div class="connect-icon">
           <img src="actualpics/UNCTarHeelRaas_TeamLogo.png" style="width:28px;height:28px;object-fit:contain;" />
