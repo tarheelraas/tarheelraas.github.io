@@ -7,26 +7,26 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .inv-hero {
-      padding: 16px 48px 0;
+      padding: 14px 48px 0;
       background: #fff;
     }
 
     .inv-hero h1 {
       font-family: 'Paytone One', sans-serif;
-      font-size: 48px;
+      font-size: 52px;
       color: var(--navy);
       margin: 0;
     }
 
     .inv-content {
-      padding: 16px 48px 20px;
+      padding: 16px 48px 25px;
     }
 
     .top-grid {
       display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 14px;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
     }
 
     /* TRYOUTS */
@@ -35,69 +35,70 @@
       border: 1px solid rgba(164,202,225,0.5);
       border-radius: 10px;
       overflow: hidden;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 220px;
+      display: flex;
+      flex-direction: column;
     }
 
     .tryout-card img {
       width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
 
     .tryout-card-body {
-      padding: 20px 18px;
+      padding: 20px 22px 24px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
       text-align: center;
+      flex: 1;
+      justify-content: center;
     }
 
     .tryout-card-body h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 22px;
+      font-weight: 600;
       color: var(--navy);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .tryout-card-body p {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--gray);
       font-weight: 300;
-      line-height: 1.65;
-      margin-bottom: 14px;
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
 
     /* INFO CARDS */
     .info-card {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 24px 20px;
+      padding: 28px 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      gap: 8px;
-      min-height: 220px;
+      gap: 10px;
     }
 
     .info-card h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 19px;
+      font-weight: 600;
       color: var(--navy);
       margin-bottom: 6px;
     }
 
     .info-card p {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--gray);
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .info-card a.inline {
@@ -109,14 +110,14 @@
     /* BOTTOM ROWS */
     .bottom-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .connect-row {
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 18px 22px;
+      padding: 20px 24px;
       display: flex;
       align-items: center;
       gap: 16px;
@@ -126,8 +127,8 @@
     .connect-row:hover { border-color: var(--carolina); }
 
     .connect-icon {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       background: var(--light-blue-pale);
       border-radius: 50%;
       display: flex;
@@ -137,8 +138,8 @@
     }
 
     .connect-icon svg {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       stroke: var(--navy);
       fill: none;
       stroke-width: 1.8;
@@ -148,14 +149,14 @@
 
     .connect-row h3 {
       font-family: 'Poppins', sans-serif;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 600;
       color: var(--navy);
       margin-bottom: 3px;
     }
 
     .connect-row a {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--carolina);
       font-weight: 500;
       text-decoration: underline;
@@ -172,8 +173,7 @@
     <ul class="nav-links">
       <li><a href="index.html">About</a></li>
       <li><a href="involved.html" class="active">Get Involved</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="competitions.html">Competitions</a></li>
+      <li><a href="competitions.html">Competitions & Events</a></li>
       <li><a href="photos.html">Photos</a></li>
     </ul>
   </nav>
@@ -231,6 +231,18 @@
         <div>
           <h3>Connect on HEELlife</h3>
           <a href="https://heellife.unc.edu/organization/tar-heel-raas" target="_blank">HEELlife</a>
+        </div>
+      </div>
+
+      <div class="connect-row">
+        <div class="connect-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Join the GroupMe</h3>
+          <a href="#" target="_blank">GroupMe</a>
         </div>
       </div>
 

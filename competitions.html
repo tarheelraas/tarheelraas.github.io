@@ -3,112 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Competitions — Tar Heel Raas</title>
+  <title>Competitions & Events — Tar Heel Raas</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .comp-list { margin-top: 40px; border-top: 1px solid var(--border); }
-    .section-label, .section-label-dark { font-size: 14px !important; }
+    .top-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    .top-row > div {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .blurb {
+      font-size: 16px;
+      color: #444;
+      font-weight: 300;
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+
+    .blurb a {
+      color: var(--carolina);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .comp-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--carolina);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .comp-label::before {
+      content: '';
+      width: 16px;
+      height: 1px;
+      background: var(--carolina);
+      display: inline-block;
+    }
+
+    .comp-list { border-top: 1px solid var(--border); }
 
     .comp-item {
-      display: block;
-      align-items: center;
-      gap: 24px;
-      padding: 22px 0;
+      padding: 16px 0;
       border-bottom: 1px solid var(--border);
     }
 
-    .comp-name { font-size: 19px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
-    .comp-loc { font-size: 15px; color: var(--gray); font-weight: 300; }
-
-    .comp-result {
-      font-size: 12px;
+    .comp-name {
+      font-size: 17px;
       font-weight: 500;
-      color: var(--carolina);
-      background: rgba(75, 156, 211, 0.1);
-      padding: 6px 16px;
+      color: var(--navy);
+      margin-bottom: 3px;
+    }
+
+    .comp-loc {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: 300;
+    }
+
+    /* EVENTS */
+    .event-list { border-top: 1px solid var(--border); margin-top: 12px; }
+
+    .event-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .event-name {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .event-tag {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
       border-radius: 2px;
+      font-weight: 500;
       white-space: nowrap;
+      background: rgba(75, 156, 211, 0.12);
+      color: #0d4a7a;
     }
 
     /* SETS GRID */
     .sets-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 48px;
+      gap: 12px;
+      margin-top: 20px;
     }
 
     .set-card {
       border: 1px solid var(--border);
       border-radius: 6px;
       overflow: hidden;
-      transition: border-color 0.2s, transform 0.2s;
       text-decoration: none;
       display: block;
-      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
     }
 
-    .set-card:hover {
-      border-color: var(--carolina);
-      transform: translateY(-3px);
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(75, 156, 211, 0.15);
-    }
+    .set-card:hover { border-color: var(--carolina); transform: translateY(-2px); text-decoration: none; }
+    .set-card.no-link { cursor: default; pointer-events: none; opacity: 0.6; }
 
-    .set-card.no-link {
-      cursor: default;
-      pointer-events: none;
-    }
-
-    .set-thumbnail {
+    .set-thumb {
       width: 100%;
-      height: 175px;
+      height: 120px;
       object-fit: cover;
       display: block;
     }
 
-    .set-thumbnail-placeholder {
+    .set-thumb-placeholder {
       width: 100%;
-      height: 175px;
-      background: var(--light-blue);
+      height: 120px;
+      background: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 9px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: rgba(19, 41, 75, 0.4);
+      color: rgba(19,41,75,0.4);
     }
 
-    .set-info {
-      padding: 12px 16px;
-    }
+    .set-info { padding: 10px 12px; }
+    .set-year { font-family: 'Paytone One', sans-serif; font-size: 13px; color: var(--carolina); margin-bottom: 2px; }
+    .set-theme { font-size: 12px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
+    .set-watch { font-size: 10px; color: var(--carolina); font-weight: 500; }
+    .set-no-link { font-size: 10px; color: var(--gray); }
 
-    .set-year {
-      font-family: 'Paytone One', sans-serif;
-      font-size: 16px;
-      color: var(--carolina);
-      margin-bottom: 4px;
-    }
-
-    .set-theme {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .set-watch {
-      font-size: 11px;
-      color: var(--carolina);
-      font-weight: 500;
-    }
-
-    .set-no-link {
-      font-size: 12px;
-      color: var(--gray);
-      font-weight: 300;
-    }
+    .section-label { font-size: 14px; }
   </style>
 </head>
 <body>
@@ -121,167 +158,120 @@
     <ul class="nav-links">
       <li><a href="index.html">About</a></li>
       <li><a href="involved.html">Get Involved</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="competitions.html" class="active">Competitions</a></li>
+      <li><a href="competitions.html" class="active">Competitions & Events</a></li>
       <li><a href="photos.html">Photos</a></li>
     </ul>
   </nav>
 
-  <div class="page-hero" style="padding:16px 48px">
-    <h1>Competitions</h1>
+  <div class="page-hero" style="padding:14px 48px;background:#fff">
+    <h1>Competitions & Events</h1>
   </div>
 
-  <!-- ABOUT + THIS YEAR SIDE BY SIDE -->
-  <div class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start">
-    <div>
-      <p style="font-size:17px;color:#444;font-weight:300;line-height:1.9;margin-top:0">
-        Tar Heel Raas competes in Raas All-Stars (RAS), the largest intercollegiate Raas-Garba circuit in the U.S. We travel to competitions hosted at colleges across the country, where teams are judged on choreography, execution, and artistic expression.
-      </p>
-      <a href="https://raasallstars.com/" target="_blank" style="color:var(--carolina);font-weight:500;font-size:15px;display:inline-block;margin-top:16px">Learn more about the competition circuit ↗</a>
-    </div>
-    <div>
-      <div class="section-label">This Year</div>
-      <h3 style="font-family:'Paytone One',sans-serif;font-size:28px;color:var(--navy);margin-bottom:0">This Year</h3>
-      <div class="comp-list">
-        <div class="comp-item">
-          <div class="comp-name">Bucky Noh Dhol (BND)</div>
-          <div class="comp-loc">University of Wisconsin-Madison</div>
-        </div>
-        <div class="comp-item">
-          <div class="comp-name">Blacksburg Ki Badmaashi (BKB)</div>
-          <div class="comp-loc">Virginia Tech</div>
+  <!-- TOP ROW: About comps + This year -->
+  <div class="section">
+    <div class="top-row">
+      <div>
+        <p class="blurb">Tar Heel Raas competes in Raas All-Stars (RAS), the largest intercollegiate Raas-Garba circuit in the U.S. We travel to competitions hosted at colleges across the country, where teams are judged on choreography, execution, and artistic expression.</p>
+        <a href="https://raasallstars.com/" target="_blank" class="blurb" style="display:block">Learn more about the competition circuit ↗</a>
+      </div>
+      <div>
+        <div class="comp-label">This year we competed in</div>
+        <div class="comp-list">
+          <div class="comp-item">
+            <div class="comp-name">Bucky Noh Dhol (BND)</div>
+            <div class="comp-loc">University of Wisconsin-Madison</div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-name">Blacksburg Ki Badmaashi (BKB)</div>
+            <div class="comp-loc">Virginia Tech</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr class="divider" />
+  <hr class="divider"/>
+
+  <!-- RECENT EVENTS -->
+  <div class="section">
+    <div class="comp-label">Spring 2026 Performances</div>
+    <p style="font-size:16px;color:#444;font-weight:300;line-height:1.9;margin-bottom:12px">Outside of the competition circuit, Tar Heel Raas performs at showcases, cultural festivals, and campus events throughout the year. This past spring semester we performed at</p>
+    <div class="event-list">
+      <div class="event-item">
+        <div class="event-name">Holi Moli</div>
+      </div>
+      <div class="event-item">
+        <div class="event-name">Bhangra Sutra</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
 
   <!-- PAST SETS -->
   <div class="section-alt">
-    <div class="section-label">Through the Years</div>
-    <h2>Past Years' Sets</h2>
-
+    <div class="comp-label">Through the Years</div>
+    <h2 style="margin-bottom:0">Past Years' Competitive Sets</h2>
     <div class="sets-grid">
 
-      <!-- 2025-26 Phineas & Ferb -->
       <a href="https://www.youtube.com/watch?v=xPdlmxets-0" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/xPdlmxets-0/hqdefault.jpg" alt="2025-26 performance" />
-        <div class="set-info">
-          <div class="set-year">2025–26</div>
-          <div class="set-theme">Phineas & Ferb</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/xPdlmxets-0/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2025–26</div><div class="set-theme">Phineas & Ferb</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2024-25 Madagascar -->
       <a href="https://www.youtube.com/watch?v=ihuKofxF13A" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/ihuKofxF13A/hqdefault.jpg" alt="2024-25 performance" />
-        <div class="set-info">
-          <div class="set-year">2024–25</div>
-          <div class="set-theme">Madagascar</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/ihuKofxF13A/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2024–25</div><div class="set-theme">Madagascar</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2023-24 Star Wars -->
       <a href="https://www.youtube.com/watch?v=-aTgt_gKvoQ&t=158s" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/-aTgt_gKvoQ/hqdefault.jpg" alt="2023-24 performance" />
-        <div class="set-info">
-          <div class="set-year">2023–24</div>
-          <div class="set-theme">Star Wars</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/-aTgt_gKvoQ/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2023–24</div><div class="set-theme">Star Wars</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2022-23 Bees -->
       <a href="https://www.youtube.com/watch?v=S67fSgwzUcs&t=161s" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/S67fSgwzUcs/hqdefault.jpg" alt="2022-23 performance" />
-        <div class="set-info">
-          <div class="set-year">2022–23</div>
-          <div class="set-theme">Bees</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/S67fSgwzUcs/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2022–23</div><div class="set-theme">Bees</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2020-22 Covid -->
       <div class="set-card no-link">
-        <div class="set-thumbnail-placeholder" style="background:var(--light-blue);color:rgba(19,41,75,0.4)">No performance</div>
-        <div class="set-info">
-          <div class="set-year">2020–22</div>
-          <div class="set-theme">Covid Years</div>
-          <div class="set-no-link">No performance held</div>
-        </div>
+        <div class="set-thumb-placeholder">No performance</div>
+        <div class="set-info"><div class="set-year">2020–22</div><div class="set-theme">Covid Years</div><div class="set-no-link">No performance held</div></div>
       </div>
 
-      <!-- 2019-20 Dogs -->
       <a href="https://www.youtube.com/watch?v=7N9WR4bLF8k" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/7N9WR4bLF8k/hqdefault.jpg" alt="2019-20 performance" />
-        <div class="set-info">
-          <div class="set-year">2019–20</div>
-          <div class="set-theme">Dogs</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/7N9WR4bLF8k/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2019–20</div><div class="set-theme">Dogs</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2018-19 Avatar -->
       <a href="https://www.youtube.com/watch?v=4PWLDFtIUNw" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/4PWLDFtIUNw/hqdefault.jpg" alt="2018-19 performance" />
-        <div class="set-info">
-          <div class="set-year">2018–19</div>
-          <div class="set-theme">Avatar</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/4PWLDFtIUNw/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2018–19</div><div class="set-theme">Avatar</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2017-18 Music Festival -->
       <a href="https://www.youtube.com/watch?v=QFou1FQEI4Y" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/QFou1FQEI4Y/hqdefault.jpg" alt="2017-18 performance" />
-        <div class="set-info">
-          <div class="set-year">2017–18</div>
-          <div class="set-theme">Music Festival</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/QFou1FQEI4Y/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2017–18</div><div class="set-theme">Music Festival</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2016-17 Movie Theater -->
       <a href="https://www.youtube.com/watch?v=yhUBSUIQOlA" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/yhUBSUIQOlA/hqdefault.jpg" alt="2016-17 performance" />
-        <div class="set-info">
-          <div class="set-year">2016–17</div>
-          <div class="set-theme">Movie Theater</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/yhUBSUIQOlA/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2016–17</div><div class="set-theme">Movie Theater</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2015-16 3 Little Pigs -->
       <a href="https://www.youtube.com/watch?v=y5RAjpl-OSI" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/y5RAjpl-OSI/hqdefault.jpg" alt="2015-16 performance" />
-        <div class="set-info">
-          <div class="set-year">2015–16</div>
-          <div class="set-theme">3 Little Pigs</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/y5RAjpl-OSI/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2015–16</div><div class="set-theme">3 Little Pigs</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2014-15 Mulan -->
       <a href="https://www.youtube.com/watch?v=m58RHZSmvp8" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/m58RHZSmvp8/hqdefault.jpg" alt="2014-15 performance" />
-        <div class="set-info">
-          <div class="set-year">2014–15</div>
-          <div class="set-theme">Mulan</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/m58RHZSmvp8/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2014–15</div><div class="set-theme">Mulan</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
-      <!-- 2013-14 Ramayana -->
       <a href="https://www.youtube.com/watch?v=wVt1laqrkp0" class="set-card" target="_blank">
-        <img class="set-thumbnail" src="https://img.youtube.com/vi/wVt1laqrkp0/hqdefault.jpg" alt="2013-14 performance" />
-        <div class="set-info">
-          <div class="set-year">2013–14</div>
-          <div class="set-theme">Ramayana</div>
-          <div class="set-watch">Watch Performance ↗</div>
-        </div>
+        <img class="set-thumb" src="https://img.youtube.com/vi/wVt1laqrkp0/hqdefault.jpg"/>
+        <div class="set-info"><div class="set-year">2013–14</div><div class="set-theme">Ramayana</div><div class="set-watch">Watch ↗</div></div>
       </a>
 
     </div>
