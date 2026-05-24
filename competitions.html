@@ -8,15 +8,21 @@
   <style>
     .top-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.8fr 1fr;
       gap: 48px;
       align-items: stretch;
     }
 
     .top-row > div {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .top-row > div:last-child {
       border: 1px solid var(--border);
       border-radius: 4px;
-      padding: 24px;
     }
 
     .blurb {
@@ -163,7 +169,7 @@
     </ul>
   </nav>
 
-  <div class="page-hero" style="padding:14px 48px;background:#fff">
+  <div class="page-hero" style="background:#fff">
     <h1>Competitions & Events</h1>
   </div>
 
@@ -171,8 +177,7 @@
   <div class="section">
     <div class="top-row">
       <div>
-        <p class="blurb">Tar Heel Raas competes in Raas All-Stars (RAS), the largest intercollegiate Raas-Garba circuit in the U.S. We travel to competitions hosted at colleges across the country, where teams are judged on choreography, execution, and artistic expression.</p>
-        <a href="https://raasallstars.com/" target="_blank" class="blurb" style="display:block">Learn more about the competition circuit ↗</a>
+        <p class="blurb">THR competes in Raas All-Stars (RAS), the largest intercollegiate Raas-Garba circuit in the U.S. We travel to competitions hosted at colleges across the country, where teams are judged on choreography, execution, and artistic expression.</p>
       </div>
       <div>
         <div class="comp-label">This year we competed in</div>
@@ -187,26 +192,17 @@
           </div>
         </div>
       </div>
+      <a href="https://raasallstars.com/" target="_blank" style="color:var(--carolina);font-weight:500;font-size:14px;display:inline-block;margin-top:12px;text-decoration:none">Learn more about the competition circuit ↗</a>
     </div>
   </div>
 
+  <hr class="divider"/>
   <hr class="divider"/>
 
   <!-- RECENT EVENTS -->
   <div class="section">
-    <div class="comp-label">Spring 2026 Performances</div>
-    <p style="font-size:16px;color:#444;font-weight:300;line-height:1.9;margin-bottom:12px">Outside of the competition circuit, Tar Heel Raas performs at showcases, cultural festivals, and campus events throughout the year. This past spring semester we performed at</p>
-    <div class="event-list">
-      <div class="event-item">
-        <div class="event-name">Holi Moli</div>
-      </div>
-      <div class="event-item">
-        <div class="event-name">Bhangra Sutra</div>
-      </div>
-    </div>
+    <p style="font-size:16px;color:#444;font-weight:300;line-height:1.9">Outside of the competition circuit, THR performs at showcases, cultural festivals, and campus events throughout the year. This past spring semester we performed at UNC's Holi Moli and BE &amp; DRD's Bhangra Sutra.</p>
   </div>
-
-  <hr class="divider"/>
 
   <!-- PAST SETS -->
   <div class="section-alt">
