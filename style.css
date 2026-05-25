@@ -128,9 +128,9 @@ nav {
 .btn-outline:hover { background: var(--carolina); color: #fff; text-decoration: none; }
 
 /* SECTIONS */
-.section { padding: 20px 48px 25px; }
-.section-alt { padding: 20px 48px 25px; background: var(--light-blue-pale); }
-.section-blue { padding: 20px 48px 25px; background: var(--light-blue); }
+.section { padding: 28px 48px 32px; }
+.section-alt { padding: 28px 48px 32px; background: var(--light-blue-pale); }
+.section-blue { padding: 28px 48px 32px; background: var(--light-blue); }
 
 .section-label {
   font-size: 12px;
@@ -162,7 +162,7 @@ nav {
 
 h1, h2, h3 { font-family: 'Paytone One', sans-serif; color: var(--navy); line-height: 1.1; }
 h1 { font-size: 76px; margin-bottom: 22px; }
-h2 { font-size: 52px; margin-bottom: 16px; }
+h2 { font-size: 40px; margin-bottom: 14px; }
 h3 { font-size: 26px; margin-bottom: 12px; }
 
 .section-intro {
@@ -177,8 +177,8 @@ h3 { font-size: 26px; margin-bottom: 12px; }
 
 /* PAGE HERO */
 .page-hero {
-  background: var(--light-blue);
-  padding: 36px 48px;
+  background: #fff;
+  padding: 14px 48px;
 }
 
 .page-hero h1 { color: var(--navy); font-size: 56px; margin-bottom: 0; }
@@ -187,7 +187,7 @@ h3 { font-size: 26px; margin-bottom: 12px; }
 /* FOOTER */
 footer {
   background: var(--light-blue);
-  padding: 32px 48px;
+  padding: 18px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -212,3 +212,96 @@ footer {
 
 .footer-logo-text { font-family: 'Paytone One', sans-serif; font-size: 20px; color: var(--navy); }
 .footer-copy { font-size: 13px; color: rgba(19, 41, 75, 0.5); }
+
+/* =====================
+   MOBILE RESPONSIVENESS
+   ===================== */
+@media (max-width: 768px) {
+  /* NAV */
+  nav {
+    padding: 0 20px;
+    height: 60px;
+  }
+  .nav-logo-text { font-size: 17px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.04em; }
+
+  /* PAGE HERO */
+  .page-hero { padding: 14px 20px !important; }
+  .page-hero h1 { font-size: 36px !important; }
+
+  /* SECTIONS */
+  .section { padding: 20px 20px 24px !important; }
+  .section-alt { padding: 20px 20px 24px !important; }
+  .divider { margin: 0 20px; }
+
+  /* HERO (home) */
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 20px 20px 24px !important;
+    gap: 20px !important;
+  }
+  .headline-wrap { height: auto !important; min-height: 120px; }
+  .headline-wrap h1 { font-size: 48px !important; }
+  .carousel { height: 280px !important; }
+
+  /* ABOUT GRID */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* STATS */
+  .stat-grid { margin-top: 0; }
+  .stat { padding: 18px !important; }
+  .stat-number { font-size: 36px !important; }
+
+  /* FAQ */
+  .faq-section { padding: 20px 20px 24px !important; }
+  .faq-q { font-size: 15px !important; }
+
+  /* GET INVOLVED */
+  .main-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .tryout-card { height: auto !important; }
+  .right-col { height: auto !important; }
+  .info-cards {
+    grid-template-columns: 1fr !important;
+  }
+  .connect-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .inv-content { padding: 12px 20px 32px !important; }
+
+  /* COMPETITIONS */
+  .top-row {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .sets-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* PHOTOS */
+  .photo-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-top: 20px !important;
+  }
+  .photo-item img { height: 180px !important; }
+
+  /* FOOTER */
+  footer { padding: 16px 20px !important; flex-direction: column; gap: 8px; text-align: center; }
+
+  /* BUTTONS */
+  .btn-primary, .btn-outline { padding: 12px 24px !important; font-size: 12px !important; }
+}
+
+@media (max-width: 480px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 9px; }
+  .headline-wrap h1 { font-size: 38px !important; }
+  .sets-grid { grid-template-columns: 1fr !important; }
+  .photo-grid { grid-template-columns: 1fr !important; }
+}
