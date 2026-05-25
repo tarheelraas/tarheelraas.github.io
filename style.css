@@ -177,7 +177,7 @@ h3 { font-size: 26px; margin-bottom: 12px; }
 
 /* PAGE HERO */
 .page-hero {
-  background: #fff;
+  background: var(--light-blue);
   padding: 14px 48px;
 }
 
@@ -221,10 +221,41 @@ footer {
   nav {
     padding: 0 20px;
     height: 60px;
+    position: relative;
   }
   .nav-logo-text { font-size: 17px; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 10px; letter-spacing: 0.04em; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--light-blue);
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(164,202,225,0.6);
+    z-index: 200;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid rgba(164,202,225,0.4); }
+  .nav-links a { display: block; padding: 14px 20px; font-size: 12px; letter-spacing: 0.06em; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
 
   /* PAGE HERO */
   .page-hero { padding: 14px 20px !important; }

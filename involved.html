@@ -173,6 +173,7 @@
       <img src="actualpics/UNCTarHeelRaas_TeamLogo.png" alt="Tar Heel Raas Logo" style="height:46px;width:auto;" />
       <span class="nav-logo-text">Tar Heel Raas</span>
     </a>
+    <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" style="display:none" id="ham"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">About</a></li>
       <li><a href="involved.html" class="active">Get Involved</a></li>
@@ -265,5 +266,15 @@
     <div class="footer-copy">© 2026 Tar Heel Raas · UNC Chapel Hill</div>
   </footer>
 
+
+  <script>
+    if (window.innerWidth <= 768) {
+      document.getElementById('ham').style.display = 'flex';
+    }
+    window.addEventListener('resize', () => {
+      const ham = document.getElementById('ham');
+      if (ham) ham.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+    });
+  </script>
 </body>
 </html>
